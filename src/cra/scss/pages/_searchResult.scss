@@ -1,0 +1,42 @@
+.searchMovieCard {
+  &__container {
+    padding-bottom: max(2.5rem, min(8vh, 4rem));
+    padding-top: max(2.5rem, min(8vh, 4rem));
+    display: flex;
+    flex-wrap: wrap;
+    &--card {
+      width: 290px;
+      padding: 0 15px 0 15px;
+      transition:
+        scale 350ms ease,
+        opacity 350ms linear;
+      div {
+        margin: 8px;
+        &:first-of-type {
+          img {
+            max-height: 350px;
+            margin: auto;
+            border-radius: 15px;
+            object-fit: contain;
+          }
+        }
+        &:nth-of-type(2) {
+          margin: 15px 0;
+          text-align: center;
+          h2 {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.searchMovieCard__container:has(.searchMovieCard__container--card:hover)
+  .searchMovieCard__container--card:not(:hover) {
+  scale: 0.95;
+  opacity: 0.25;
+}

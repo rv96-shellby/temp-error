@@ -1,0 +1,40 @@
+.header-wrapper {
+  img {
+    height: auto;
+    min-width: 100%;
+    display: block;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  div {
+    &:last-of-type {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      [alt="profile-icon"] {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+
+      button {
+        border: none !important;
+        outline: none !important;
+        background: transparent;
+        color: white;
+      }
+
+      > div {
+        padding-right: 10px;
+      }
+    }
+  }
+}

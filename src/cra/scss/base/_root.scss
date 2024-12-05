@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+html,
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  font-family: $ff-netflix !important;
+  line-height: 1.2;
+  font-size: 16px !important;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  // background: $bg-color-100;
+  background-color: black;
+  color: $text-color-100;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+}
